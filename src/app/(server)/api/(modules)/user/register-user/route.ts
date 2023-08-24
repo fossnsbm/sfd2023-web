@@ -1,32 +1,42 @@
 import { monogoConnect } from "@/app/(server)/config/db";
 import UserModel from "@/app/(server)/models/user";
-import { ITest } from "@/types/users";
+import { IRegisterUser } from "@/types/users";
 import { NextResponse } from "next/server";
 
-const registerUser = async (req: Request, res: Response) => {
-  const { fullName, userRole }: ITest = await req.json();
+const registerUserRoute = async (req: Request) => {
+  const userDetails: IRegisterUser = await req.json();
   try {
     await monogoConnect();
-    console.log(userRole, fullName);
-    const user = await UserModel.create({ userRole, fullName });
-    await user
+    const existingUser = await UserModel.findOne({ email: userDetails.email });
+    if (existingUser) {
+      return NextResponse.json(
+        { error: "User already exists" },
+        { status: 400 }
+      );
+    }
+
+    const user = await UserModel.create({ ...userDetails });
+    user
       .save()
-      .then((result: any) => {
-        NextResponse.json({ result }, { status: 200 });
+      .then(() => {
+        NextResponse.json(
+          { message: "User created successfully!" },
+          { status: 201 }
+        );
       })
-      .catch((error: any) => {
-         NextResponse.json({ error }, { status: 500 });
+      .catch((error: Error) => {
+        NextResponse.json({ error: error.message }, { status: 400 });
       });
     return NextResponse.json(
-      { message: "User registered successfully!" },
-      { status: 200 }
+      { message: "User created successfully!" },
+      { status: 201 }
     );
   } catch (error) {
     return NextResponse.json(
-      { error: "Internal server error!" },
+      { error: "Internal server error" },
       { status: 500 }
     );
   }
 };
 
-export { registerUser as POST };
+export { registerUserRoute as POST };
