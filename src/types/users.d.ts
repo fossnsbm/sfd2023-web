@@ -5,21 +5,15 @@ export interface IRegisterUser {
   universityMail: string;
   nic: string;
   profileImgUrl: string;
-  contactNumber: string;
-  whatsAppNumber: string;
+  contactNumber: number;
+  whatsAppNumber: number;
   foodPreference: string;
   isNsbmStudent: boolean;
   universityName?: string;
-  studentId?: string;
+  studentId?: number;
   batch?: string;
-  isAttending: boolean;
+  isAttended: boolean;
 }
-
-export interface ITest {
-    userRole: string;
-    fullName: string;
-}
-
 export interface IUpdateUser {
   profileImgUrl: string;
 }
