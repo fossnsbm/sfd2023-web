@@ -31,9 +31,9 @@ const registerUserRoute = async (req: Request) => {
       { message: "User created successfully!" },
       { status: 201 }
     );
-  } catch (error) {
+  } catch (error: any) {
     return NextResponse.json(
-      { error: "Internal server error" },
+      { error: error.message },
       { status: 500 }
     );
   }
