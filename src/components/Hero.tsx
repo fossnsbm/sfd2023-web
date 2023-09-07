@@ -3,30 +3,39 @@
 import Container from "@/components/Container";
 import Image from 'next/image'
 
-const HeroSection = () => {
+const styles = {
+    monoFonts: "text-center text-lg md:text-2xl",
+    bottomFooter: "text-center text-sx md:text-sm"
+}
+
+const Hero = () => {
 
     return (
-        <>
-            <Container>
-                <div className="relative">
-                    <Image
-                        src="/images/hero-logo.webp"
-                        alt="Picture of the author"
-                        width={1172}
-                        height={605}
-                        className="w-full h-auto"
-                    />
-                    <div className="absolute lg:px-28 lg:flex justify-between md:bottom-5 lg:bottom-16 w-full bg-opacity-75 text-white p-4 text-center">
-                        <p className="font-mono text-xl uppercase">September 18, 2023</p>
-                        <p className="font-mono text-xl uppercase">9.00 AM - 1.00 PM</p>
-                        <p className="font-mono text-xl uppercase">C2 - 002, NSBM GREEN UNIVERSITY</p>
+        <Container>
+            <div className="my-10 text-white">
+                <Image
+                    width={1172}
+                    height={100}
+                    src="/images/hero-logo.webp"
+                    alt="Hero Logo"
+                />
+
+                <div className="-mt-10 md:-mt-20 flex flex-col gap-2 md:flex md:flex-row justify-between relative items-center mb-5 md:mb-10  font-mono">
+                    <div>
+                        <p className={styles.monoFonts}>SEPTEMBER 18, 2023</p>
+                    </div>
+                    <div className={styles.monoFonts}>
+                        <p>9.00 AM - 1.00 PM</p>
+                    </div>
+                    <div className={styles.monoFonts}>
+                        <p>C2 - 002, NSBM GREEN UNIVERSITY</p>
                     </div>
                 </div>
-            </Container>
-        </>
+            </div>
+        </Container>
     )
 }
 
-export default HeroSection;
+export default Hero;
 
 
