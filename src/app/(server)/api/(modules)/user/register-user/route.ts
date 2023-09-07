@@ -1,5 +1,6 @@
 import { monogoConnect } from "@/app/(server)/config/db";
 import UserModel from "@/app/(server)/models/user";
+import { confirmationMail } from "@/app/(server)/utils/confirmationMail";
 import { IRegisterUser } from "@/types/users";
 import { NextResponse } from "next/server";
 
@@ -7,7 +8,7 @@ const registerUserRoute = async (req: Request) => {
   const userDetails: IRegisterUser = await req.json();
   try {
     await monogoConnect();
-    const existingUser = await UserModel.findOne({ email: userDetails.email });
+    const existingUser = await UserModel.findOne({ universityMail: userDetails.universityMail });
     if (existingUser) {
       return NextResponse.json(
         { error: "User already exists" },
@@ -19,6 +20,7 @@ const registerUserRoute = async (req: Request) => {
     user
       .save()
       .then(() => {
+        confirmationMail(userDetails.universityMail, userDetails.fullName);
         NextResponse.json(
           { message: "User created successfully!" },
           { status: 201 }
