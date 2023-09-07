@@ -22,11 +22,17 @@ export const confirmationMail = async (
     <p>The event will be held in <b>C2-002</b> from <b> 9.00am - 1pm </b> on the <b> 18th of September 2023 </b> </p>
     <p>Your decision to join us in celebrating and promoting open-source software is not only exciting but also incredibly valuable to the spirit of innovation and collaboration.</p>
     <p>See you there!</p>
-    `
+    `,
   };
 
-  await mailTransport.sendMail(details, (err) => {
-    if (err) console.log(err);
-    else console.log("Email sent successfully");
+  await new Promise((resolve, reject) => {
+    mailTransport.sendMail(details, (err, info) => {
+      if (err) {
+        console.error(err);
+        reject(err);
+      } else {
+        resolve(info);
+      }
+    });
   });
 };
