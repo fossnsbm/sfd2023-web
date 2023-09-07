@@ -8,7 +8,9 @@ const registerUserRoute = async (req: Request) => {
   const userDetails: IRegisterUser = await req.json();
   try {
     await monogoConnect();
-    const existingUser = await UserModel.findOne({ universityMail: userDetails.universityMail });
+    const existingUser = await UserModel.findOne({
+      universityMail: userDetails.universityMail,
+    });
     if (existingUser) {
       return NextResponse.json(
         { error: "User already exists" },
@@ -34,10 +36,7 @@ const registerUserRoute = async (req: Request) => {
       { status: 201 }
     );
   } catch (error: any) {
-    return NextResponse.json(
-      { error: error.message },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: error.message }, { status: 500 });
   }
 };
 
