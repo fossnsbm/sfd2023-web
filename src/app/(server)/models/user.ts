@@ -9,7 +9,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     unique: true,
     match: [
-      /^[a-zA-Z0-9._%+-]+@students\.nsbm\.ac\.lk$/,
+      /^.+@students\.nsbm\.ac\.lk$/,
       "Please enter a valid university email with the '@students.nsbm.ac.lk' postfix",
     ],
     trim: true,
