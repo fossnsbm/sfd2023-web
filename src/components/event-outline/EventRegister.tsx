@@ -17,7 +17,7 @@ const EventRegister = () => {
         <div className="flex text-white flex-grow mt-4 mb-6">
             <div className="flex-none flex-col">
                 <div className="flex-none">
-                    <div className="w-[3.9rem] h-[3.9rem] rounded-full border-2 border-white flex items-center justify-center">
+                    <div className="w-[3.9rem] h-[3.9rem] rounded-full border border-white flex items-center justify-center">
                         <span>
                             <BsArrowRight size={25} />
                         </span>

@@ -18,7 +18,7 @@ const EventCard: React.FC<EventCardProps> = ({ eventName, eventTime, eventDescri
                     <div className="rounded-full flex items-center justify-center">
                         <span>
                             <Image
-                                src="images/event-icon.svg"
+                                src="/images/event-icon.svg"
                                 alt='icon'
                                 width={60}
                                 height={60}
@@ -27,7 +27,7 @@ const EventCard: React.FC<EventCardProps> = ({ eventName, eventTime, eventDescri
                     </div>
                     <div className="items-center justify-center flex">
                         <Image
-                            src="images/event-icon-line.svg"
+                            src="/images/event-icon-line.svg"
                             alt=""
                             width={1}
                             height={90}
