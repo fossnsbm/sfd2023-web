@@ -8,6 +8,7 @@ import Footer from '@/components/Footer'
 import axios from 'axios'
 import SuccessModal from '@/components/SuccessModal'
 import UserExistsModal from '@/components/UserExistsModal'
+import Navbar from '@/components/Navbar'
 
 type Props = {}
 
@@ -43,8 +44,8 @@ const RegisterPage = (props: Props) => {
       setFormError("Please fill in all required field*")
       return false
     }
-    
-      
+
+
     if (!/^[a-zA-Z0-9._%+-]+@students\.nsbm\.ac\.lk$/.test(universityMail)) {
       setFormError("Please enter a vaild university email*")
       return false
@@ -86,7 +87,7 @@ const RegisterPage = (props: Props) => {
 
       axios
         .post("/api/user/register-user", userData)
-        .then((data:any) => {
+        .then((data: any) => {
           setIsLoading(false)
           setIsDisabled(false)
           setModal(true)
@@ -104,6 +105,7 @@ const RegisterPage = (props: Props) => {
 
   return (
     <>
+      <Navbar />
       <div style={{ position: "relative" }} className='h-40 md:h-52 lg:h-64'>
         <Image
           src='/images/line-art.webp'
