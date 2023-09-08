@@ -12,7 +12,7 @@ function Intro() {
         <Container>
             <div className='flex flex-col'>
                 <div className='flex flex-col md:flex-row justify-between'>
-                    <div className='text-gray font-medium text-[20px] text-center lg:text-[28px] md:text-left lg:text-left pt-[20px]'>
+                    <div className='text-gray font-medium text-[20px] text-center lg:text-[28px] md:text-left lg:text-left md:pt-[20px]'>
                         Lorem ipsum dolor sit amet consectetur adipiscing elit<br/>Ut et massa mi.
                     </div>
                     <div className='text-center lg:text-right  pt-[20px]'>

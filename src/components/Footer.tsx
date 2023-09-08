@@ -21,7 +21,7 @@ const styles = {
 
 const Footer = (props: Props) => {
     return (
-        <div className="text-white">
+        <div className="text-white mb-5 mt-10">
             <Container>
                 <div>
                     <div className="md:flex justify-between items-center">
