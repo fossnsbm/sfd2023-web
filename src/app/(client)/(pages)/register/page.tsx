@@ -43,7 +43,9 @@ const RegisterPage = (props: Props) => {
       setFormError("Please fill in all required field*")
       return false
     }
-    if (!/^\S+@\S+\.\S+$/.test(universityMail)) {
+    
+      
+    if (!/^[a-zA-Z0-9._%+-]+@students\.nsbm\.ac\.lk$/.test(universityMail)) {
       setFormError("Please enter a vaild university email*")
       return false
     }
