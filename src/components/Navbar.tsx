@@ -13,6 +13,10 @@ function Navbar() {
     const goToHome = () => {
         router.push('/what-is-sfd')
     }
+
+    const goToRegister = () => {
+        router.push('/register')
+    }
     return (
 
         <Container>
@@ -36,7 +40,7 @@ function Navbar() {
                     </div>
                     <div className='hidden lg:block'>
                         <Button
-                            onClick={() => console.log('clicked')}
+                            onClick={goToRegister}
                             label='Register now'
                             icon={TbChevronRight}
                         />
