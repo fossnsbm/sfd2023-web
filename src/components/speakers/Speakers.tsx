@@ -17,8 +17,8 @@ function Speakers() {
           </span>
         </h1>
         <p className="text-white mt-[40px] text-center text-[20px] lg:w-[65%] md:w-[75%] w-[90%] mx-auto">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec felis
-          elit, pulvinar non lorem id, feugiat suscipit tellus.
+          Passionate speakers unite to ignite the FOSS spirit with eager minds
+          and open-source hearts.
         </p>
         <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-8 md:mt-[76px] mt-[36px]">
           {speakerDetails.map((speaker, id) => (
