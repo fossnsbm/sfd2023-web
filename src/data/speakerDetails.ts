@@ -1,38 +1,20 @@
 export const speakerDetails = [
   {
     id: "speaker-1",
-    imgUrl: "/images/speakers/dummy-profile.png",
-    name: "Speaker Name",
-    position: "POSITION",
+    imgUrl: "/images/speakers/speaker-lahiru.webp",
+    name: "Lahiru Himesh Madusanka",
+    position: "LEAD ENGINEER AT CLOUD ASSESS",
   },
   {
     id: "speaker-2",
-    imgUrl: "/images/speakers/dummy-profile.png",
-    name: "Speaker Name",
-    position: "POSITION",
+    imgUrl: "/images/speakers/speaker-ravindu.webp",
+    name: "Ravindu Nirmal Fernando",
+    position: "HEAD OF DEVSECOPS AT EMOJOT",
   },
   {
     id: "speaker-3",
-    imgUrl: "/images/speakers/dummy-profile.png",
-    name: "Speaker Name",
-    position: "POSITION",
-  },
-  {
-    id: "speaker-4",
-    imgUrl: "/images/speakers/dummy-profile.png",
-    name: "Speaker Name",
-    position: "POSITION",
-  },
-  {
-    id: "speaker-5",
-    imgUrl: "/images/speakers/dummy-profile.png",
-    name: "Speaker Name",
-    position: "POSITION",
-  },
-  {
-    id: "speaker-6",
-    imgUrl: "/images/speakers/dummy-profile.png",
-    name: "Speaker Name",
-    position: "POSITION",
+    imgUrl: "/images/speakers/speaker-uvindu.webp",
+    name: "Uvindu Perera",
+    position: "DEVOPS ENGINEER AT LSEG",
   },
 ];
