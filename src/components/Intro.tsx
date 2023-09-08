@@ -19,7 +19,7 @@ function Intro() {
                 <div className='flex flex-col'>
                     <div className='flex flex-col md:flex-row justify-between'>
                         <div className='text-gray font-medium text-[20px] text-center lg:text-3xl md:text-left lg:text-left md:pt-[20px]'>
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit<br />Ut et massa mi.
+                            Register now and lock in your spot for the unforgettable <br /> Software Freedom Day 2023 celebration.
                         </div>
                         <div className='text-center lg:text-right  pt-[20px]'>
                             <Button
