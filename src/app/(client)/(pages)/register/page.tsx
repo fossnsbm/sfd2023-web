@@ -9,6 +9,7 @@ import axios from 'axios'
 import SuccessModal from '@/components/SuccessModal'
 import UserExistsModal from '@/components/UserExistsModal'
 import Navbar from '@/components/Navbar'
+import LineArtBanner from '@/components/LineArtBanner'
 
 type Props = {}
 
@@ -106,13 +107,7 @@ const RegisterPage = (props: Props) => {
   return (
     <>
       <Navbar />
-      <div style={{ position: "relative" }} className='h-40 md:h-52 lg:h-64'>
-        <Image
-          src='/images/line-art.webp'
-          fill
-          style={{ objectFit: "cover" }}
-          alt='Register SFD' />
-      </div>
+      <LineArtBanner />
       <Container>
         <div className='max-w-4xl mx-auto'>
           <div className='py-10'>
@@ -124,13 +119,13 @@ const RegisterPage = (props: Props) => {
                 <label className={`${formStyles.labelStyle}`}>Name*</label>
                 <input
                   type="text"
-                  placeholder='Ex: John Doe'
+                  placeholder='Example: John Doe'
                   className={`${formStyles.inputStyle}`}
                   value={fullName}
                   onChange={(e) => setFullName(e.target.value)} />
               </div>
               <div className={`${formStyles.divStyle}`}>
-                <label className={`${formStyles.labelStyle}`}>University mail*</label>
+                <label className={`${formStyles.labelStyle}`}>University email*</label>
                 <input type="email" className={`${formStyles.inputStyle}`}
                   value={universityMail}
                   onChange={(e) => setUniversityMail(e.target.value)} />
