@@ -39,7 +39,7 @@ const Button: React.FC<ButtonProps> = ({
             px-6
             font-medium
             ${outline ? `` : `bg-white`}
-            ${outline ? `gradient-border` : `border`}
+            ${outline ? `gradient-border` : `border-none`}
             ${outline ? `text-white` : `text-black`}
             ${underline ? `underline border-none` : ``}
             ${long ? `w-full` : ``}
