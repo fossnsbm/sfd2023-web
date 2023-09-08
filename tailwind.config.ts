@@ -13,6 +13,7 @@ const config: Config = {
       gray: "#8A939E",
       yellow: "#00000",
       green: "#6ABD44",
+      red: "#FF0000",
       gradient: {
         yellow: "#F8CD37",
         green: "#6ABD44",
