@@ -81,7 +81,7 @@ const RegisterPage = (props: Props) => {
       setIsLoading(true)
 
       axios
-        .post("https://sfd2023-wasaththeekshana.vercel.app/api/user/register-user", userData)
+        .post("/api/user/register-user", userData)
         .then(() => {
           setIsLoading(false)
           setIsDisabled(false)
