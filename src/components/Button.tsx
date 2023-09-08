@@ -1,6 +1,7 @@
 'use client';
 
 import { IconType } from "react-icons/lib";
+import Image from "next/image";
 
 interface ButtonProps {
     label: string;
@@ -10,6 +11,7 @@ interface ButtonProps {
     underline?: boolean;
     long?: boolean;
     icon?: IconType;
+    loading?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -20,6 +22,7 @@ const Button: React.FC<ButtonProps> = ({
     underline,
     long,
     icon: Icon,
+    loading,
 }) => {
     return (
         <button
@@ -50,7 +53,7 @@ const Button: React.FC<ButtonProps> = ({
             items-center
             ${long ? `!justify-center` : ``} 
             `}>
-                {label}
+                {loading ? <Image src={"/images/SpinnerLoader.gif"} width={30} height={20} alt="loader" /> : `${label}`}
                 {Icon && (
                     <Icon
                         size={18}
