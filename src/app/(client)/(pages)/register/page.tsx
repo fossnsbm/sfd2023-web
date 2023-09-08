@@ -7,6 +7,7 @@ import Button from '@/components/Button'
 import Footer from '@/components/Footer'
 import axios from 'axios'
 import SuccessModal from '@/components/SuccessModal'
+import UserExistsModal from '@/components/UserExistsModal'
 
 type Props = {}
 
@@ -25,6 +26,7 @@ const RegisterPage = (props: Props) => {
   const [formError, setFormError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [isDisabled, setIsDisabled] = useState(false);
+  const [isUserExist, setIsUserExist] = useState(false);
   const [modal, setModal] = useState(false)
 
   const clearForm = () => {
@@ -82,15 +84,17 @@ const RegisterPage = (props: Props) => {
 
       axios
         .post("/api/user/register-user", userData)
-        .then(() => {
+        .then((data:any) => {
           setIsLoading(false)
           setIsDisabled(false)
           setModal(true)
-
+          console.log(data.error)
           clearForm();
-
         })
         .catch((error) => {
+          setIsUserExist(true)
+          setIsLoading(false)
+          setIsDisabled(false)
           console.log(error)
         })
     }
@@ -163,6 +167,7 @@ const RegisterPage = (props: Props) => {
         <Footer />
       </Container >
       {modal ? <SuccessModal /> : ""}
+      {isUserExist ? <UserExistsModal /> : ""}
     </ >
   )
 }
