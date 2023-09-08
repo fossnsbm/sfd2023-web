@@ -11,7 +11,7 @@ const EventOutline = () => {
     return (
         <Container>
             <Heading />
-            <div className="mt-6">
+            <div className="mt-10">
 
                 {eventDeatails.map((event) => (
                     <EventCard
