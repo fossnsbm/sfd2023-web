@@ -9,7 +9,7 @@ const Stats = () => {
     return (
         <div className='mb-10'>
             <Container>
-                <p className='text-xl sm:text-4xl font-medium text-center md:text-left text-white'>Lorem ipsum dolor sit <span className='text-gray'>amet consectetur adipiscing </span>elit Ut et massa mi. <span className='text-gray'> Aliquam in hendrerit urna</span>. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas<span className='text-gray'> vitae mattis tellus</span>.</p>
+                <p className='text-2xl md:text-5xl md:leading-[3.75rem] font-medium text-center md:text-left text-white'>Lorem ipsum dolor sit <span className='text-gray'>amet consectetur adipiscing </span>elit Ut et massa mi. <span className='text-gray'> Aliquam in hendrerit urna</span>. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas<span className='text-gray'> vitae mattis tellus</span>.</p>
 
                 <ul className='grid grid-cols-2 sm:grid-cols-4 gap-4 my-5 md:my-12'>
                     {stats.map((stat, index) => (
