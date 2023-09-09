@@ -6,7 +6,7 @@ import { TbChevronRight } from 'react-icons/tb'
 import Container from './Container'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
-
+import { motion as m} from 'framer-motion'
 
 function Intro() {
     const router = useRouter();
@@ -16,7 +16,7 @@ function Intro() {
     return (
         <>
             <Container>
-                <div className='flex flex-col'>
+                <m.div className='flex flex-col'>
                     <div className='flex flex-col md:flex-row justify-between'>
                         <div className='text-gray font-medium text-[20px] text-center lg:text-3xl md:text-left lg:text-left md:pt-[20px]'>
                             Register now and lock in your spot for the unforgettable <br /> Software Freedom Day 2023 celebration.
@@ -39,7 +39,7 @@ function Intro() {
                             style={{ width: '100%', height: 'auto' }}
                         />
                     </div>
-                </div>
+                </m.div>
             </Container>
         </>
     )

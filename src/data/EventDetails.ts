@@ -1,4 +1,4 @@
-export const eventDeatails = [
+export const eventDetails = [
   {
     id: "1",
     name: "Community Build-up",
@@ -15,7 +15,7 @@ export const eventDeatails = [
     id: "3",
     name: "Revolutionizing Industries with Open Source",
     Description: "Unleashing the power of Open Source to revolutionize diverse industries.",
-    time:"11.45 am - 12.00am"
+    time:"11.45 am - 12.00pm"
   },
   
 ];
