@@ -40,7 +40,7 @@ const Hero = () => {
 
     return (
       <Container>
-        <div className="my-10 text-white">
+        <div className="my-14 md:my-10 text-white">
           <motion.div
             initial={{ opacity: 0, scale: 0.9}}
             animate={{ opacity: 1, scale: 1 }}
@@ -51,6 +51,7 @@ const Hero = () => {
               height={100}
               src="/images/hero-logo.webp"
               alt="Hero Logo"
+              loading="eager"
             />
           </motion.div>
 

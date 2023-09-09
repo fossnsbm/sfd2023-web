@@ -19,8 +19,8 @@ function Navbar() {
         router.push('/register')
     }
     return (
-        <div className='w-full h-20 fixed top-0 bg-black/40 backdrop-blur-md z-50 py-3'>
-            <div className='flex felx-row justify-between max-w-[1400px] mx-auto xl:px-20 md:px-10 sm:px-2 px-6'>
+        <div className='w-full flex items-center justify-center md:block h-20 fixed top-0 bg-black/40 backdrop-blur-md z-50 md:py-3'>
+            <div className='flex items-center flex-row justify-between max-w-[1400px] mx-auto xl:px-20 md:px-10 sm:px-2 px-6'>
                 <motion.div
                     initial={{x: -150, opacity: 0, scale: 0.9}}
                     animate={{x: 0, opacity: 1, scale: 1}}
