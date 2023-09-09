@@ -24,7 +24,7 @@ function Navbar() {
                 <motion.div
                     initial={{x: -150, opacity: 0, scale: 0.9}}
                     animate={{x: 0, opacity: 1, scale: 1}}
-                    transition={{duration: 1, ease: 'easeOut', type: 'spring'}}>                 
+                    transition={{duration: 1, ease: 'easeOut'}}>                 
                     <div className='flex flex-row items-center'>
                         <div className='w-32 md:w-full'>
                             <Image
@@ -45,7 +45,7 @@ function Navbar() {
                 <motion.div
                     initial={{x: 150, opacity: 0, scale: 0.9}}
                     animate={{x: 0, opacity: 1, scale: 1}}
-                    transition={{duration: 1, ease: 'easeInOut', type: 'spring'}}> 
+                    transition={{duration: 1, ease: 'easeInOut'}}> 
                     <div className='hidden lg:block'>
                         <Button
                             onClick={goToRegister}
