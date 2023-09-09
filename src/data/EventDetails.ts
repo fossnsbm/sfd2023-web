@@ -1,4 +1,4 @@
-export const eventDeatails = [
+export const eventDetails = [
   {
     id: "1",
     name: "Community Build-up",
