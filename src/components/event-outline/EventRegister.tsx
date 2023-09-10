@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 const EventRegister = () => {
   const router = useRouter();
   const goToRegister = () => {
-    router.push("/register");
+    router.push("/events/sfd-2023/register");
   };
   return (
     <div className="flex text-white flex-grow mt-4 mb-20 overflow-x-hidden">
