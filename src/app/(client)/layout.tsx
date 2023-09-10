@@ -10,8 +10,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'SFD 2023',
-  description: 'Software Freedom Day 2023 Sri Lanka',
+  title: 'FOSS Community of NSBM',
+  description: 'Free & Open Source Software Community of NSBM Green University Town',
 }
 
 export default function RootLayout({
