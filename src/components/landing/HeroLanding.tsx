@@ -1,8 +1,9 @@
 /* This example requires Tailwind CSS v3.0+ */
-import { useState , useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
+import Button from '../Button'
 
 const navigation = [
     { name: 'Events', href: 'events/sfd-2023' },
@@ -10,29 +11,29 @@ const navigation = [
 ]
 
 export default function Example() {
-    
+
     const [animate, setAnimate] = useState(true);
 
-  useEffect(() => {
-    // Remove the animation class after a delay (adjust the delay as needed)
-    const animationTimeout = setTimeout(() => {
-      setAnimate(false);
-    }, 1500); // Remove the class after 2 seconds (adjust as needed)
+    useEffect(() => {
+        // Remove the animation class after a delay (adjust the delay as needed)
+        const animationTimeout = setTimeout(() => {
+            setAnimate(false);
+        }, 1500); // Remove the class after 2 seconds (adjust as needed)
 
-    return () => {
-      clearTimeout(animationTimeout); // Clear the timeout if the component unmounts
-    };
-  }, []);
-    
+        return () => {
+            clearTimeout(animationTimeout); // Clear the timeout if the component unmounts
+        };
+    }, []);
+
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
-        <div className="relative isolate overflow-hidden bg-gray-900">
-            <Image 
-            src='/images/hero_logo.jpg'
-            className="absolute inset-0 -z-10 object-cover opacity-[15%]"
-            alt='hero-image'
-            fill
+        <div className="relative isolate overflow-hidden min-h-screen bg-gray-900">
+            <Image
+                src='/images/hero_logo.jpg'
+                className="-z-10 object-cover opacity-[15%]"
+                alt='hero-image'
+                fill
             />
             {/* <img
                 src="/images/hero_logo.jpg"
@@ -107,12 +108,12 @@ export default function Example() {
                             <a href="#" className="-m-1.5 p-1.5">
                                 <span className="sr-only">Your Company</span>
                                 <Image
-                                src='/images/FOSS_logo.png'
-                                alt='sfd-logo'
-                                width={60}
-                                height={0}
-                                className='cursor-pointer'
-                            />
+                                    src='/images/FOSS_logo.png'
+                                    alt='sfd-logo'
+                                    width={60}
+                                    height={0}
+                                    className='cursor-pointer'
+                                />
                             </a>
                             <button
                                 type="button"
@@ -140,25 +141,15 @@ export default function Example() {
                         </div>
                     </Dialog.Panel>
                 </Dialog>
-                <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+                <div className="mx-auto max-w-2xl flex  h-screen -mt-20 justify-center items-center">
+
                     <div className="text-center">
-                    <h1 className={`text-4xl font-bold tracking-tight text-white sm:text-6xl ${animate ? 'animate-bounce' : ''}`}>
-                            FOSS COMMUNITY NSBM
+                        <h1 className={`text-4xl font-bold tracking-tight text-white sm:text-6xl ${animate ? 'animate-bounce' : ''}`}>
+                            FOSS COMMUNITY OF NSBM
                         </h1>
                         <p className="mt-6 text-lg leading-8 text-gray">
-                        Contribute to the society with developments and new concepts transforming young lives to feel as a part of the world{"'"}s largest developing community.
+                            Contribute to the society with developments and new concepts transforming young lives to feel as a part of the world{"'"}s largest developing community.
                         </p>
-                        {/* <div className="mt-10 flex items-center justify-center gap-x-6">
-                            <a
-                                href="#"
-                                className="rounded-md bg-indigo-500 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
-                            >
-                                Get started
-                            </a>
-                            <a href="#" className="text-base font-semibold leading-7 text-white">
-                                Learn more <span aria-hidden="true">→</span>
-                            </a>
-                        </div> */}
                     </div>
                 </div>
             </div>

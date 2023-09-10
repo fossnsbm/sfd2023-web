@@ -11,7 +11,7 @@ const UserExistsModal = (props: Props) => {
     const router = useRouter();
 
     const handleClick = () => {
-        router.push("/")
+        router.push("/events/sfd-2023")
     }
 
     return (

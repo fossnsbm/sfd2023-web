@@ -13,7 +13,7 @@ const LatestEvents = () => {
   return (
     <div>
       <Container>
-        <p className="text-3xl md:text-4xl md:leading-[3.75rem] font-medium text-center md:text-left text-white mb-5">
+        <p className="text-3xl my-14 md:my-10 md:text-4xl md:leading-[3.75rem] font-medium text-center md:text-left text-white mb-5">
           Latest Events
         </p>
         <div className="md:flex">

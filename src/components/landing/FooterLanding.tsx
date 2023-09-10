@@ -52,12 +52,12 @@ const FoosterLanding = () => {
                 </a>
               </span>
               <span className="px-3">
-                <a href="" target="_blank">
+                <a href="https://twitter.com/fossnsbm" target="_blank">
                   <BsTwitter />
                 </a>
               </span>
               <span className="px-3">
-                <a href="" target="_blank">
+                <a href="https://www.youtube.com/@fosscommunitynsbm8708" target="_blank">
                   <BsYoutube />
                 </a>
               </span>
