@@ -12,11 +12,11 @@ import { easeInOut, motion } from 'framer-motion'
 function Navbar() {
     const router = useRouter()
     const goToHome = () => {
-        router.push('/')
+        router.push('/events/sfd-2023')
     }
 
     const goToRegister = () => {
-        router.push('/register')
+        router.push('/events/sfd-2023/register')
     }
     return (
         <div className='w-full flex items-center justify-center md:block h-20 fixed top-0 bg-black/40 backdrop-blur-md z-50 md:py-3'>
@@ -36,7 +36,7 @@ function Navbar() {
                                 className='cursor-pointer'
                             />
                         </div>
-                        <Link href="/what-is-sfd" className='hidden lg:inline-flex text-white pl-[50px] w-full'>
+                        <Link href="/events/sfd-2023/what-is-sfd" className='hidden lg:inline-flex text-white pl-[50px] w-full'>
                             What is SFD?
                         </Link>
                     </div>
