@@ -11,13 +11,13 @@ const LatestEvents = () => {
   };
 
   return (
-    <div>
+    <div className="text-white">
       <Container>
         <p className="text-3xl my-14 md:my-10 md:text-4xl md:leading-[3.75rem] font-medium text-center md:text-left text-white mb-5">
           Latest Events
         </p>
         <div className="md:flex">
-          <div className="max-w-sm border border-white rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mx-auto">
+          <div className="max-w-sm border border-white rounded-lg shadow  mx-auto">
             <Image
               className="rounded-t-lg bg-black"
               width={1172}
@@ -28,11 +28,11 @@ const LatestEvents = () => {
 
             <div className="p-5">
               <a href="#">
-                <h5 className="mb-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
+                <h5 className="mb-2 text-3xl font-bold tracking-tight text-gray-900 ">
                   SFD 2023
                 </h5>
               </a>
-              <p className="mb-5 font-normal text-gray-700 dark:text-white">
+              <p className="mb-5 font-normal text-gray-700 ">
                 Software Freedom Day is an annual, world-wide celebration of
                 free software. The FOSS Community of NSBM Green University is
                 ready to celebrate SFD{"'"}23 on September 18, 2023, at the
@@ -45,7 +45,7 @@ const LatestEvents = () => {
               />
             </div>
           </div>
-          <div className="max-w-sm border gradient-border rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mx-auto relative mt-10 md:mt-0">
+          <div className="max-w-sm border gradient-border rounded-lg shadow  mx-auto relative mt-10 md:mt-0">
             <Image
               className="rounded-t-lg w-full h-full opacity-10"
               width={1172}

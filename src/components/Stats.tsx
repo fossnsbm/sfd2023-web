@@ -29,7 +29,7 @@ const Stats = () => {
 
                 <div className='flex justify-center gap-6 sm:mt-8 mt-6'>
                     <p className='sm:text-sm text-xs text-gray font-medium'>What is SFD?</p>
-                    <Link className='sm:text-sm text-xs text-white flex items-center' href="/what-is-sfd">Explore more <TbChevronRight /></Link>
+                    <Link className='sm:text-sm text-xs text-white flex items-center' href="/events/sfd-2023/what-is-sfd">Explore more <TbChevronRight /></Link>
                 </div>
             </Container>
         </div>

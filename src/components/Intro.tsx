@@ -11,7 +11,7 @@ import { motion as m} from 'framer-motion'
 function Intro() {
     const router = useRouter();
     const goToRegister = () => {
-        router.push('/register')
+        router.push('/evnets/sfd-2023/register')
     }
     return (
         <>
