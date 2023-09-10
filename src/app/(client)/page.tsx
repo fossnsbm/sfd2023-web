@@ -1,8 +1,15 @@
 'use client';
+
+import FoosterLanding from "@/components/landing/FooterLanding";
+import HeroLanding from "@/components/landing/HeroLanding";
+import LatestEvents from "@/components/landing/LatestEvents";
+
 export default function Home() {
   return (
     <>
-      <a href="events/sfd-2023"><p className="text-white">go now</p></a>
+      <HeroLanding />
+      <LatestEvents />
+      <FoosterLanding />
     </>
   );
 }
