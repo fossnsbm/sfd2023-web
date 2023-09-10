@@ -55,7 +55,7 @@ const LatestEvents = () => {
             />
             <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
               <p className="text-gray text-4xl font-bold absolute text-center">
-                Comming Soon
+                Coming Soon
               </p>
             </div>
           </div>
