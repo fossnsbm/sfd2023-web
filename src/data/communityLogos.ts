@@ -26,7 +26,14 @@ export const communityLogos = [
   {
     id: "logo-5",
     height: "59",
+    width: "90",
+    imgUrl: "/images/community-logo/wiflk-logo.png",
+  },
+  {
+    id: "logo-6",
+    height: "59",
     width: "125",
     imgUrl: "/images/community-logo/wifnsbm-logo.png",
   },
+
 ];
