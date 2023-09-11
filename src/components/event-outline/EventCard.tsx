@@ -33,7 +33,7 @@ const EventCard: React.FC<EventCardProps> = ({ eventName, eventTime, eventDescri
                         <p className="font-mono text-gray">{eventTime}</p>
                     </div>
                     <div className="md:basis-1/3 font-mono text-gray">
-                        <p className="text-right align-top pt-6 md:pt-0 pb-2">
+                        <p className="text-left md:text-right align-top pt-6 md:pt-0 pb-2">
                             {eventDescription}
                         </p>
                     </div>
