@@ -42,7 +42,7 @@ const RegisterPage = (props: Props) => {
   const validateForm = () => {
 
     if (!fullName.trim() || !universityMail.trim() || !contactNumber.trim() || !studentId.trim() || !batch.trim()) {
-      setFormError("Please fill in all required field*")
+      setFormError("Please fill in all required fields*")
       return false
     }
 
