@@ -31,7 +31,7 @@ const Footer = (props: Props) => {
                                 FOSS Community of NSBM
                             </div>
                         </div>
-                        <div className="flex ms-12 sm:ms-60 mt-5 md:mt-0">
+                        <div className="flex mt-5 md:mt-0 justify-center">
                             <span className="px-3">
                                 <a href="https://github.com/fossnsbm" target="_blank">
                                     <BsGithub />
