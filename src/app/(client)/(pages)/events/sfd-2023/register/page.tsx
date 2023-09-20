@@ -10,9 +10,9 @@ import SuccessModal from '@/components/SuccessModal'
 import UserExistsModal from '@/components/UserExistsModal'
 import Navbar from '@/components/Navbar'
 import LineArtBanner from '@/components/LineArtBanner'
+import { useRouter } from 'next/navigation'
 
 type Props = {}
-
 const formStyles = {
   labelStyle: "text-white md:text-lg lg:text-xl",
   inputStyle: "bg-black border border-gray text-white rounded-md p-1 mt-2 w-full md:p-2",
@@ -20,6 +20,7 @@ const formStyles = {
 }
 
 const RegisterPage = (props: Props) => {
+  const router = useRouter()
   const [fullName, setFullName] = useState('');
   const [universityMail, setUniversityMail] = useState('');
   const [contactNumber, setContactNumber] = useState('');
@@ -104,12 +105,16 @@ const RegisterPage = (props: Props) => {
     }
   }
 
+  const goToHome = () => {
+    router.push('/')
+  }
+
   return (
     <>
       <Navbar />
       <LineArtBanner />
       <Container>
-        <div className='max-w-4xl mx-auto'>
+        {/* <div className='max-w-4xl mx-auto'>
           <div className='py-10'>
             <h1 className='text-gray text-2xl md:text-4xl lg:text-5xl'>Let&apos;s get <span className='text-white'>registered.</span></h1>
           </div>
@@ -161,6 +166,14 @@ const RegisterPage = (props: Props) => {
                 <Button label='Register' onClick={handleSubmit} long loading={isLoading} disabled={isDisabled} />
               </div>
             </form>
+          </div>
+        </div> */}
+        <div className='text-white max-w-4xl mx-auto min-h-[70vh] flex justify-center items-center flex-col'>
+          <h1 className=' text-center text-3xl'>Registration Closed!</h1>
+          <h1>See you next time!</h1>
+          <div className='mt-5'>
+
+            <Button label='Back to Home' onClick={goToHome} />
           </div>
         </div>
         <Footer />
